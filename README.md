@@ -1,9 +1,9 @@
 # Machine_Learning
 
-# 학습용, 비즈니스용 "머신러닝" 패키지
+## 학습용, 비즈니스용 "머신러닝" 패키지
 pip install scikit-learn
 
-# 시각화 도구
+### 시각화 도구
 pip install matplotlib
 
 # 과학관련 연산 모듈
