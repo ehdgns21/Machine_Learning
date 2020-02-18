@@ -1,7 +1,28 @@
 2.18(화)노트 - 선형회귀
 
-- 딥러닝은 선형회귀의 집합이라 할수 있다
-- 선형회귀는 이후에 관련된 모델들이 많다 vs SVM, RF 는 단일
+
+<머신러닝>
+ - 머신러닝은 학문이고 이론적. 코딩은 별로 안씀
+ - 실제 : 크롤링 > DB적재 > DB전처리 > DB열어서 모델 선택 >
+ - 모델링은 그냥 입력하고 몇일 기다림
+ - tensorflow만 GPU 사용가능하다
+ - 젤 마지막과정 CNN은 코드는 실제로 10줄이 안됨
+ - tensorflow는 머신러닝에도 쓸수 있고 Tree만 빼고 다 됨.
+ - architecture가 되려면 이론적인걸 쌓아야함
+ 
+ 
+* 선형회귀 특징
+ - 데이터가 많을수록 좋다
+ - 저차원모델에서는 불리하다
+ - 딥러닝의 기초가 됨 : 나중에 모델, 공식 그대로 사용됨
+ - 딥러닝은 선형회귀의 집합이라 할수 있다
+ - 선형회귀는 이후에 관련된 모델들이 많다 vs SVM, RF 는 단일
+ 
+
+* 선형회귀 단점 : 시각화가 힘들다
+ - 1차원 : 점 / 2차원 : 선 / 3차원 : 면 을 그린다
+ - 사이즈를 체크하는 수준
+ - 간접적으로 scoring을 보는 정도
 
 
 [선형회귀 모델의 예측함수] Linear Regression
@@ -33,11 +54,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import mglearn
 
-
-* 선형회귀 단점 : 시각화가 힘들다
- - 1차원 : 점 / 2차원 : 선 / 3차원 : 면 을 그린다
- - 사이즈를 체크하는 수준
- - 간접적으로 scoring을 보는 정도
  
  
 [최소 제곱법(OLS, Ordinary Least Squares)]
@@ -63,6 +79,26 @@ cf. MAE(Mean Absoltute Error)도 있다 : 제곱대신 절대값
 * RMSE(Root Mean Squared Error) - 릿지방식에서 씀
 
 
+LinearRegression(copy_X=True, fit_intercept=True, n_jobs=1, normalize=False)
+
+ - 언더바(_)가 붙은건 스스로 학습한 
+
+
+lr의 계수(weight 또는 cofficient) : [0.39390555]
+ - 배열형태로 나옴
+ 
+
+* Ridge와 Lasso 특징
+ - 데이터가 많을때 선형회귀를 쓰는게 나을수도 : 실제 플젝에서 5만~10만건 이상 모았을때
+ - 
+
+
+* alpha의 특징
+ - alpha : w(가중치) 억제 
+ - alpha ↑ : w ↓
+
+ 
+ 
 
 
 
@@ -71,6 +107,12 @@ cf. MAE(Mean Absoltute Error)도 있다 : 제곱대신 절대값
 
 
 
+
+
+
+ 
+ 
+ 
 
 
 
