@@ -1,0 +1,81 @@
+2.18(화)노트 - 선형회귀
+
+- 딥러닝은 선형회귀의 집합이라 할수 있다
+- 선형회귀는 이후에 관련된 모델들이 많다 vs SVM, RF 는 단일
+
+
+[선형회귀 모델의 예측함수] Linear Regression
+
+y = w[0]∗x[0] + b  (특성1개)
+
+y = w[0]∗x[0] + w[1]∗x[1] + ...+ w[p]∗x[p] + b  (특성여러개)
+
+
+- 모델 파라미터 : w 와 b - 학습되어 변경됨
+- 하이퍼 파라미터(Hyper Parameter) : 직접 설정해 줘야 하는 파라미터를 
+
+* w(weight) = 가중치, 힘, 기울기 : 입력데이터에 힘을 조절하는 역할
+ - 머신러닝 모델이 직접구함
+ - w가 높아지면 복잡도↑ > 민감도↑ > 과대적합 가능성↑
+ 
+* p는 특성의 계수 : csv파일의 컬럼의 개수 / 이미지파일의 픽셀 개수
+ 
+ 
+y = w[0]∗x[0] + b
+
+
+* import
+
+#필요 라이브러리 임포트 복붙
+from IPython.display import display
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import mglearn
+
+
+* 선형회귀 단점 : 시각화가 힘들다
+ - 1차원 : 점 / 2차원 : 선 / 3차원 : 면 을 그린다
+ - 사이즈를 체크하는 수준
+ - 간접적으로 scoring을 보는 정도
+ 
+ 
+[최소 제곱법(OLS, Ordinary Least Squares)]
+
+* 선형모델의 목적은 MSE(평균 제곱 오차)의 값을 최소로 줄이는 W와 B값을 찾는게 목적
+ 
+ 
+* 평균 제곱 오차(MSE - Mean Squared Error) - 랏쏘방식에서 씀
+ 
+ MSE = 1/n ∑(i=1→n) (yi−yi)^2
+                 (타겟값 - 예측값)
+
+y는 타깃갑(=정답=입력된값)
+
+cf. MAE(Mean Absoltute Error)도 있다 : 제곱대신 절대값
+ 
+ 
+ MSE는 지수함수로 기울기가 변하므로
+ > 미분을 하게되면 오차가 최소가 되는 방향으로 유도할수 있다
+ > GD(Gradient Decent) 경사하강법
+
+
+* RMSE(Root Mean Squared Error) - 릿지방식에서 씀
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
